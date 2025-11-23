@@ -19,6 +19,7 @@ type ServiceConfig struct {
 	Sponsor     string            `yaml:"sponsor" json:"sponsor"`   // 赞助者：提供 API Key 的个人或组织
 	SponsorURL  string            `yaml:"sponsor_url" json:"sponsor_url"` // 赞助者链接（可选）
 	Channel     string            `yaml:"channel" json:"channel"`   // 业务通道标识（如 "vip-channel"、"standard-channel"），用于分类和过滤
+	Model       string            `yaml:"model" json:"model"`       // 测试的模型名称（可选）
 	URL         string            `yaml:"url" json:"url"`
 	Method      string            `yaml:"method" json:"method"`
 	Headers     map[string]string `yaml:"headers" json:"headers"`

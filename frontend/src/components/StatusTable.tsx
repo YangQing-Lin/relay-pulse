@@ -76,6 +76,14 @@ export function StatusTable({
             </th>
             <th
               className="p-4 font-medium cursor-pointer hover:text-cyan-400 transition-colors"
+              onClick={() => onSort('model')}
+            >
+              <div className="flex items-center">
+                模型 <SortIcon columnKey="model" />
+              </div>
+            </th>
+            <th
+              className="p-4 font-medium cursor-pointer hover:text-cyan-400 transition-colors"
               onClick={() => onSort('currentStatus')}
             >
               <div className="flex items-center">
@@ -140,6 +148,9 @@ export function StatusTable({
               </td>
               <td className="p-4 text-slate-400 text-xs">
                 {item.channel || '-'}
+              </td>
+              <td className="p-4 text-slate-400 text-xs">
+                {item.model || '-'}
               </td>
               <td className="p-4">
                 <div className="flex items-center gap-2">

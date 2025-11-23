@@ -39,6 +39,7 @@ export interface MonitorResult {
   sponsor: string;                     // 赞助者
   sponsor_url?: string;                // 赞助者链接
   channel: string;                     // 业务通道标识
+  model: string;                       // 测试的模型名称
   current_status: CurrentStatus | null;
   timeline: TimePoint[];
 }
@@ -80,6 +81,7 @@ export interface ProcessedMonitorData {
   sponsor: string;                     // 赞助者
   sponsorUrl?: string | null;          // 赞助者链接
   channel?: string;                    // 业务通道标识
+  model?: string;                      // 测试的模型名称
   history: Array<{
     index: number;
     status: StatusKey;

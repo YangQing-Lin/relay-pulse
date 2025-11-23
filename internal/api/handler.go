@@ -43,6 +43,7 @@ type MonitorResult struct {
 	Sponsor     string              `json:"sponsor"`  // 赞助者
 	SponsorURL  string              `json:"sponsor_url"` // 赞助者链接
 	Channel     string              `json:"channel"`  // 业务通道标识
+	Model       string              `json:"model"`    // 测试的模型名称
 	Current     *CurrentStatus      `json:"current_status"`
 	Timeline    []storage.TimePoint `json:"timeline"`
 }
@@ -128,6 +129,7 @@ func (h *Handler) GetStatus(c *gin.Context) {
 			Sponsor:     task.Sponsor,
 			SponsorURL:  task.SponsorURL,
 			Channel:     task.Channel,
+			Model:       task.Model,
 			Current:     current,
 			Timeline:    timeline,
 		})

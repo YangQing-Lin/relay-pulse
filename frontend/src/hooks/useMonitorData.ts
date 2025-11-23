@@ -139,6 +139,7 @@ export function useMonitorData({
               sponsor: item.sponsor,
               sponsorUrl: validateUrl(item.sponsor_url),
               channel: item.channel || undefined,
+              model: item.model || undefined,
               history,
               currentStatus,
               uptime,
